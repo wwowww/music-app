@@ -1,7 +1,17 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import { Button } from "./components/ui/button";
+
 function App() {
   return (
     <>
-      <h1 className="text-red-500 text-5xl">안녕하세요.</h1>
+      <header>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+    </header>
     </>
   )
 }
