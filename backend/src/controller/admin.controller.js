@@ -16,10 +16,6 @@ const uploadToCloudinary = async (file) => {
   }
 }
 
-export const getAdmin = (req, res) => {
-  res.send("Admin route with GET method");
-}
-
 export const createSong = async (req, res, next) => {
   try {
     if(!req.files || !req.files.audioFile || !req.files.imageFile) {
