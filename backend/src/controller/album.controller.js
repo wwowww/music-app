@@ -11,7 +11,7 @@ export const getAllAlbums = async (req, res, next) => {
 }
 export const getAllAlbumById = async (req, res, next) => {
   try {
-    const { albumId } = res.params;
+    const { albumId } = req.params;
     const album = await Album.findById(albumId).populate("songs");
 
     if(!album) {
